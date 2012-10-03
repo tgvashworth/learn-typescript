@@ -1,6 +1,7 @@
-define(["require", "exports", "datatri"], function(require, exports, __dt__) {
+define(["require", "exports", "AttributeCollector"], function(require, exports, __dt__) {
     var dt = __dt__;
 
+    "use strict";
     var collect_data;
     var process;
     collect_data = function (elem) {
@@ -9,7 +10,6 @@ define(["require", "exports", "datatri"], function(require, exports, __dt__) {
         var i = 0;
         var len = attributes.length;
 
-        console.log(data_collector);
         for(; i < len; i++) {
             if(attributes[i].name.match(/^data-/i)) {
                 data_collector.push({

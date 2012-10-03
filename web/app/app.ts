@@ -1,4 +1,5 @@
-import dt = module("datatri");
+import dt = module("AttributeCollector");
+"use strict";
 
 // Definitions
 var collect_data: (elem: Node) => dt.Attribute[];
@@ -11,7 +12,6 @@ collect_data = function (elem) {
     , i = 0
     , len = attributes.length;
 
-  console.log(data_collector);
   for(; i < len; i++) {
     if( attributes[i].name.match(/^data-/i) ) {
       data_collector.push({
